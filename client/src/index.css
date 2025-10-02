@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 152 54% 29%;     /* #2D6A4F */
+  --primary-foreground: 211 100% 99%;
+  --secondary: 152 38% 40%;   /* #40916C */
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 142 45% 70%;      /* #95D5B2 */
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 152 54% 29%;
+  --radius: 0.5rem;
+
+  /* Chart colors */
+  --chart-1: 152 54% 29%;
+  --chart-2: 152 38% 40%;
+  --chart-3: 142 45% 70%;
+  --chart-4: 115 54% 76%;
+  --chart-5: 127 23% 36%;
+
+  /* Sidebar colors */
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 20 14.3% 4.1%;
+  --sidebar-primary: 152 54% 29%;
+  --sidebar-primary-foreground: 211 100% 99%;
+  --sidebar-accent: 142 45% 70%;
+  --sidebar-accent-foreground: 24 9.8% 10%;
+  --sidebar-border: 20 5.9% 90%;
+  --sidebar-ring: 152 54% 29%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 152 54% 29%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 152 38% 40%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 142 45% 70%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-heading {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-sans {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .ayurcura-logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply inline-flex items-center px-3 py-2 border-b-2 text-sm font-medium transition-colors duration-200 ease-in-out;
+  }
+
+  .nav-link-active {
+    @apply border-primary-600 text-primary-600 font-semibold;
+  }
+
+  .nav-link-inactive {
+    @apply border-transparent text-gray-600 hover:border-primary-300 hover:text-primary-500;
+  }
+}
